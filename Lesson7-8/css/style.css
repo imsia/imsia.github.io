@@ -714,6 +714,10 @@ footer .main {
   font-size: 20px;
 }
 
+.main__foot:hover{
+  border-bottom: 2px solid #edbfff;
+}
+
 .designed {
   margin: 51px -3px 0 0;
   color: #fff;
