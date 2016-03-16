@@ -1411,26 +1411,65 @@ header {
 
 header .main {
   float: none;
-  margin: 24px 0 0 -3px;
-  padding: 0;
-  position: static;
-  width: 100%;
+  width: 51%;
+  padding-top: 5px;
+  margin-top: 13px;
+  left: 24.6%;
+  position: absolute;
+  z-index: 2;
+  border-radius: 10px 10px 10px 10px;
 }
 
 .main__item {
   display: none;
-  border-bottom: none;
+  line-height: 38px;
+  max-height: 42px;
   width: 100%;
+  margin: 0;
+  padding: 0;
   text-align: center;
+  border-top: 1px solid #523e5a;
+  border-bottom: 1px solid #36283e;
+  box-sizing: border-box;
 }
 
 .active {
   display: block;
+  border: none;
 }
 
 .active .main__link {
   padding: 0 5px 2px 5px;
   border-bottom: 2px solid #edbfff;
+}
+
+header .main :first-child {
+  min-height: 47px;
+  border-radius: 10px 10px 0 0;
+  padding-top: 5px;
+  margin-top: -5px;
+}
+
+header .main:hover {
+  background: rgba(54, 41, 62, 0.9);
+}
+
+header .main:hover .main__item {
+  display: block;
+}
+
+header .main__item:hover {
+  border-bottom: 2px solid #edbfff;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+header .main>:last-child {
+  border-bottom: none;
+}
+
+header .main>:last-child:hover {
+  border-bottom: 2px solid #edbfff;
+  border-radius: 0 0 10px 10px;
 }
 
 .bg__news {
