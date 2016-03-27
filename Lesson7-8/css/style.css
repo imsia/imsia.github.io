@@ -98,6 +98,11 @@ header {
   text-decoration: none;
 }
 
+.logotip1 {
+  color: transparent;
+  text-decoration: none;
+}
+
 header .main {
   float: right;
   margin-top: 10px;
