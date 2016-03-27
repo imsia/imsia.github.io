@@ -98,7 +98,17 @@ header {
   text-decoration: none;
 }
 
+.logotip a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
 .logotip1 {
+  color: transparent;
+  text-decoration: none;
+}
+
+.logotip1 a:hover {
   color: transparent;
   text-decoration: none;
 }
