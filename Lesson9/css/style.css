@@ -1,25 +1,17 @@
 @import url(http://fonts.googleapis.com/css?family=Varela+Round);
-* {
-  margin: 0;
-  padding: 0;
-}
+
 .clearfix:after {
   content: "";
   display: block;
   clear: both;
 }
 .wrapper {
-  /*border-left: 1px solid black;
-  border-right: 1px solid black;*/
   max-width: 960px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
 }
-/*BACKGROUND*/
-/*
-  <div class="bg__footer"></div>
-</div>*/
+
 .bg {
   position: absolute;
   top: 0;
@@ -42,7 +34,7 @@
   top: 279px;
 }
 .bg__about {
-  background-color: #322539; /*IE*/
+  background-color: #322539; 
   background: linear-gradient(to top, #322539, #745083);
   border-bottom: 1px solid #0d151b;
   height: 340px;
@@ -72,7 +64,7 @@ border-bottom: 1px solid #d8d8d8;
   background: url("../img/footer.jpg");
   background-size: cover;
 }
-/*END OF BACKGROUND*/
+
 
 .header {
   padding: 60px 0 0 0;
@@ -154,7 +146,7 @@ margin-left: 0;
     height: 100%;
     display: none;
     position: absolute;
-	  opacity: 0.5;
+    opacity: 0.5;
     z-index: 9;
     cursor: pointer;
     transition: opacity .2s;
@@ -320,8 +312,8 @@ input#news-4:checked ~ .news__nav-dots label#news-dot-4 {
   width: 30%;
   float: right;
   margin-right: -1.9%;
-  /*margin-left: 1.33%;*/
 }
+
 .about__first-sprite {
   float: left;
   background: url("../img/icons.png") no-repeat;
