@@ -74,17 +74,36 @@ border-bottom: 1px solid #d8d8d8;
   color: #fff;
   display: block;
   float: left;
-  font-family: LeagueGothic;
+  font-family: LeagueGothic, Tahoma, sans-serif;
   font-size: 48px;
   text-transform: uppercase;
-  text-shadow: 0 2px 1px #000;
-}
-.er {
-  color: #745083;
-  -webkit-text-fill-color: transparent;
-  background: -webkit-linear-gradient(bottom, #33263a, #745083);
-  -webkit-background-clip: text;
   text-shadow: none;
+}
+
+.er {
+  background: linear-gradient(to top, #33263a, #745083);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: none;
+}
+.logotip {
+  color: #fff;
+  text-decoration: none;
+}
+
+.logotip a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.logotip1 {
+  color: transparent;
+  text-decoration: none;
+}
+
+.logotip1 a:hover {
+  color: transparent;
+  text-decoration: none;
 }
 .header .main {
   float: right;
