@@ -9,12 +9,17 @@ padding: 0;
   clear: both;
 }
 .wrapper {
+  /*border-left: 1px solid black;
+  border-right: 1px solid black;*/
   max-width: 960px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
 }
-
+/*BACKGROUND*/
+/*
+  <div class="bg__footer"></div>
+</div>*/
 .bg {
   position: absolute;
   top: 0;
@@ -37,7 +42,7 @@ padding: 0;
   top: 279px;
 }
 .bg__about {
-  background-color: #322539; 
+  background-color: #322539; /*IE*/
   background: linear-gradient(to top, #322539, #745083);
   border-bottom: 1px solid #0d151b;
   height: 340px;
