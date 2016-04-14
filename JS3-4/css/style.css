@@ -12,10 +12,10 @@
 }
 .q-header {
   text-align: center;
-  font-size: 110%;
+  font-size: 100%;
 }
 .q-list {
-  font-size: 120%;
+  font-size: 100%;
   margin-top: 40px;
 }
 .q-list-item {
@@ -45,7 +45,7 @@
   width: 12px;
   height: 12px;
   margin-right: 10px;
-  border: 2px solid black;
+  border: 3px solid black;
   background-color: #cfe2f3;
 }
 .q-option-item input[type='checkbox'] {
