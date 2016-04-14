@@ -10,17 +10,20 @@ var questionnaire = {
     questionWrapper.classList.add('questionnaire');
     document.body.appendChild(questionWrapper);
   },
+  
   header: function(a) {
     if ( document.getElementsByClassName('q-header').length == 0 ) {
     title = document.createElement('div');
     title.classList.add('q-header');
     title.innerHTML = a;
     questionWrapper.appendChild(title);
-    } else {
+    }
+    else {
     title = document.getElementsByClassName('q-header');
     title[0].innerHTML = a;
     }
   },
+  
   question: function() {
     checkForm();
     listCounter++;
@@ -52,8 +55,7 @@ questionnaire.create();
 questionnaire.header('Тест по программированию');
 questionnaire.question('Вопрос №1', 'Вариант ответа №1', 'Вариант ответа №2', 'Вариант ответа №3');
 questionnaire.question('Вопрос №2', 'Вариант ответа №1', 'Вариант ответа №2', 'Вариант ответа №3', 'Вариант ответа №4');
-questionnaire.question('Вопрос №3', 'Вариант ответа №1', 'Вариант ответа №2', 'Вариант ответа №3', 'Вариант ответа №4',
- 'Вариант ответа №5');
+questionnaire.question('Вопрос №3', 'Вариант ответа №1', 'Вариант ответа №2', 'Вариант ответа №3', 'Вариант ответа №4');
 
 function checkForm() {
   if ( document.getElementsByClassName('q-form').length == 0 ) {
