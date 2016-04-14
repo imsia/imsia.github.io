@@ -54,8 +54,8 @@ var questionnaire = {
 questionnaire.create();
 questionnaire.header('Тест по программированию');
 questionnaire.question('Вопрос №1', 'Вариант ответа №1', 'Вариант ответа №2', 'Вариант ответа №3');
-questionnaire.question('Вопрос №2', 'Вариант ответа №1', 'Вариант ответа №2', 'Вариант ответа №3', 'Вариант ответа №4');
-questionnaire.question('Вопрос №3', 'Вариант ответа №1', 'Вариант ответа №2', 'Вариант ответа №3', 'Вариант ответа №4');
+questionnaire.question('Вопрос №2', 'Вариант ответа №1', 'Вариант ответа №2', 'Вариант ответа №3');
+questionnaire.question('Вопрос №3', 'Вариант ответа №1', 'Вариант ответа №2', 'Вариант ответа №3');
 
 function checkForm() {
   if ( document.getElementsByClassName('q-form').length == 0 ) {
