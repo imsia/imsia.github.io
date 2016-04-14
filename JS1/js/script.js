@@ -1,3 +1,7 @@
+//Часть 1. Возведение числа в степень. Аналог Math.pow
+
+console.log('Результат возведения в степень: ', pow( prompt("Введите основу: "), prompt("Введите степень: ")));
+
 function pow(a, n) {
   var result = a;
   if ( a == 0 ) return 0;
@@ -15,6 +19,7 @@ function pow(a, n) {
   return 1
 }
 
+//Поиск имени в массиве
 
 var arrUsers = [];
 for ( var i = 0; i < 5; i++) {
