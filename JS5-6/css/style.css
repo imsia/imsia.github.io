@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.background {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../img/background.png");
+}
+
+.timer__wrapper {
+  width: 50%;
+  margin: 250px auto;
+  font-family: Impact, Arial, sans-serif;
+  font-size: 60px;
+}
+
+.timer {
+  width: 100%;
+  font-size: 96px;
+  padding: center;
+  min-width: 45%;
+  margin: 2%;
+}
+
+.button_s {
+  font-size: 36px;
+  padding: 15px;
+  min-width: 45%;
+  margin: 2%;
+  background-color: #34EF2E;
+}
+.button_c {
+  font-size: 36px;
+  padding: 15px;
+  min-width: 45%;
+  margin: 2%;
+  background-color: #FA3E0F;
+}
+
+.button_p {
+  font-size: 36px;
+  padding: 15px;
+  min-width: 45%;
+  margin: 2%;
+  background-color: #05FF93;
+}
