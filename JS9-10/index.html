@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript Homework 9-10</title>
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/jquery.formstyler.css">
+        <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="js/jquery.formstyler.js"></script>
+        <script src="js/jquery.jcarousel.js"></script>
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="container">
+            <div class="navigation-menu">
+                <ul class="nav">
+                    <li> <a href="#">Новости</a>
+                        <ul>
+                            <li><a href="#">Инфо 1</a></li>
+                            <li><a href="#">Инфо 2</a></li>
+                            <li><a href="#">Инфо 3</a></li>
+                            <li><a href="#">Инфо 4</a></li>
+                            <li><a href="#">Инфо 5</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Лучшие фото</a>
+                        <ul>
+                            <li><a href="#">Фото дня</a></li>
+                            <li><a href="#">Фото недели</a></li>
+                            <li><a href="#">Фото месяца</a></li>
+                            <li><a href="#">Фото года</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Блоги</a>
+                        <ul>
+                            <li><a href="#">Первый</a></li>
+                            <li><a href="#">Второй</a></li>
+                            <li><a href="#">Третий</a></li>                            
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Путешествие</a>
+                        <ul>
+                            <li><a href="#">Для гурманов</a></li>
+                            <li><a href="#">Романтическое</a></li>
+                            <li><a href="#">С семьей</a></li>
+                            <li><a href="#">На машине</a></li>
+                            <li><a href="#">Активный отдых</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Журналы</a>
+                        <ul>
+                            <li><a href="#">Новые номера</a></li>
+                            <li><a href="#">Выбор читателей</a></li>
+                            <li><a href="#">Архивы</a></li>
+                            <li><a href="#">Оформить подписку</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div id="carousel">
+            <figure id="spinner">
+                <img src="img/1.jpg" class="photo" alt="Журнал Traveler">
+                <img src="img/2.jpg" class="photo" alt="Журнал GEO">
+                <img src="img/3.jpg" class="photo" alt="Журнал ESCAPE">
+                <img src="img/4.png" class="photo" alt="Журнал ВОЯЖ">
+                <img src="img/4.jpg" class="photo" alt="Журнал Едем за границу">
+                <img src="img/5.jpg" class="photo" alt="Журнал Вокруг света">
+                <img src="img/6.jpg" class="photo" alt="Журнал Discovery">
+                <img src="img/7.jpg" class="photo" alt="Журнал Lonely planet">
+            </figure>
+            </div>
+<span style=float:left class=ss-icon onclick="galleryspin('-')">&lt;</span>
+<span style=float:right class=ss-icon onclick="galleryspin('')">&gt;</span>
+            <form action="">
+                <div>
+                    <fieldset class="js-dropdown">
+                        <legend>Выбрать журнал</legend>
+                        <select name="" id=""> 
+                            <option value="">Traveler</option>
+                            <option value="">GEO</option>
+                            <option value="">ESCAPE</option>
+                            <option value="">ВОЯЖ</option>
+                            <option value="">Едем за границу</option>
+                            <option value="">Вокруг света</option>
+                            <option value="">Discovery</option>
+                            <option value="">Lonely planet</option>                            
+                        </select>
+                    </fieldset>
+                </div>
+                <div>
+                    <fieldset class="js-checkboxes">
+                        <legend>Выбрать год выпуска</legend>
+                        <input type="checkbox" id="check1">
+                        <label for="check1">2016 год</label>
+                        <input type="checkbox" id="check2">
+                        <label for="check2">2015 год</label>
+                        <input type="checkbox" id="check3">
+                        <label for="check3">2014 год</label>
+                    </fieldset>
+                </div>
+                <div>
+                    <fieldset class="css-checkboxes">
+                        <legend>Выбрать месяц выпуска</legend>
+                        <input type="checkbox" id="test-check1">
+                        <label for="test-check1">Январь-Апрель</label>
+                        <input type="checkbox" id="test-check2">
+                        <label for="test-check2">Май-Август</label>
+                        <input type="checkbox" id="test-check3">
+                        <label for="test-check3">Сентябрь-Декабрь</label>
+                    </fieldset>
+                </div>
+            </form>
+        </div>
+        <script src="js/script.js"></script>
+    </body>
+</html>
