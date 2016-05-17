@@ -5,8 +5,8 @@ $(function () {
   })
 
   var data = {
-    name: "Склярова Ирина",
-    photoURL: "../img/photo.JPG",
+    name: "Склярова Ирина Андреевна",
+    photoURL: "https://github.com/imsia/imsia.github.io/tree/master/JS11-12/imgphoto.JPG",
     profession: "Студентка курса GoFrontend GoForIt Online",
     reason1: "Хочу научиться новому и полезному",
     reason2: "Хочу сменить профессию на более востребованную и прибыльную",
