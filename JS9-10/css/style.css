@@ -47,8 +47,7 @@ body {
   position: absolute;
   left:-9999px;
   opacity: 0; 
-  color:green;
-  background:red;
+  color: white;
   text-decoration:none;
   padding: 0px;
   width: 130%;
@@ -70,9 +69,6 @@ body {
   left:0; 
   opacity:1;
   padding-top: 0px; 
-  background: -webkit-linear-gradient(left, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
-  background: -o-linear-gradient(left, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
-  background: linear-gradient(to right, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
 }
 
 .nav li:hover a{ 
@@ -83,7 +79,6 @@ body {
 }
 .nav li:hover ul a{ 
   text-decoration:none;
-  -webkit-transition:-webkit-transform 0.075s linear;
   white-space: nowrap;
 }
 
@@ -104,20 +99,21 @@ body {
     z-index: 1;
     display: none;
     list-style-type: none;
+    color: white;
 }
 .nav > li:hover .submenu {
     left: -1px;
+    color: white;
 }
 
 .submenu > li {
 
     background: -webkit-linear-gradient(left, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
-background: -o-linear-gradient(left, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
-
-background: linear-gradient(to right, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
+    background: -o-linear-gradient(left, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
+    background: linear-gradient(to right, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
 }
 .submenu > li > a {
-    color: green;
+    color: white;
     padding: 5px 30px;
     display: block;
     text-decoration: none;
