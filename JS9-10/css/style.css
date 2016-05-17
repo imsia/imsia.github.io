@@ -47,8 +47,8 @@ body {
   position: absolute;
   left:-9999px;
   opacity: 0; 
-  color:#fff;
-  background:#303030;
+  color:green;
+  background:red;
   text-decoration:none;
   padding: 0px;
   width: 130%;
