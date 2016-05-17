@@ -1,50 +1,73 @@
-﻿(function($) {
-    $(function() {
-        $('.jcarousel').jcarousel();
+﻿"use strict";
+$(function () {
+  var questions = localStorage.getItem('questions');
+  questions = JSON.parse(questions);
 
-        $('.jcarousel-control-prev')
-            .on('jcarouselcontrol:active', function() {
-                $(this).removeClass('inactive');
-            })
-            .on('jcarouselcontrol:inactive', function() {
-                $(this).addClass('inactive');
-            })
-            .jcarouselControl({
-                target: '-=1'
-            });
+  var $html = $('#questionnaire').html();
+  var content = tmpl($html, {
+    data: questions
+  });
+  $('body').append(content);
 
-        $('.jcarousel-control-next')
-            .on('jcarouselcontrol:active', function() {
-                $(this).removeClass('inactive');
-            })
-            .on('jcarouselcontrol:inactive', function() {
-                $(this).addClass('inactive');
-            })
-            .jcarouselControl({
-                target: '+=1'
-            });
+  $('.questionWrapper :submit').on('click', function (e) {
+    e.preventDefault();
+    showModal();
+  });
 
-        $('.jcarousel-pagination')
-            .on('jcarouselpagination:active', 'a', function() {
-                $(this).addClass('active');
-            })
-            .on('jcarouselpagination:inactive', 'a', function() {
-                $(this).removeClass('active');
-            })
-            .jcarouselPagination();
+  function checkResult() {
+    var result = 0;
+    // var totalCorrectAnswers = 0;
+    var $questionList = $('.questionWrapper ol>li>span');
+    $questionList.each(function (index) {
+      // debugger;
+      var currentQuestionCorrectAnswers = 0;
+      var checkedAnswers = 0;
+      var checkedCorrectAnswers = 0;
+      for ( var i = 0; i < questions.length; i++) {
+        if ( $( this ).attr('title') == questions[i].questionID ) {       //поиск нужного вопроса
+          checkedAnswers = $( this ).parent().find(':checked').length;
+
+          for (var j = 0; j < questions[i].answers.length; j++) {      //суммарный подсчёт правильных ответов
+            if (questions[i].answers[j].correct === true) {
+              currentQuestionCorrectAnswers += 1;
+              // totalCorrectAnswers +=1;
+            }
+            $( this ).parent().find(':checked').each(function (index2) {
+                if ( this.value == questions[i].answers[j].value && questions[i].answers[j].correct === true ) {
+                  checkedCorrectAnswers +=1;
+                };
+              });
+          };
+        };
+      };
+      if (checkedAnswers != 0) {
+        if (checkedCorrectAnswers === checkedAnswers && checkedAnswers === currentQuestionCorrectAnswers) {
+          result +=1;
+        } else if (checkedCorrectAnswers === checkedAnswers) {
+          result += checkedCorrectAnswers / currentQuestionCorrectAnswers;
+        } else {
+          result += checkedCorrectAnswers / checkedAnswers;
+        }
+      }
     });
-})(jQuery);
 
-$(function(){
-    $('.top-menu li').mouseenter(function(){
-        $('.submenu', this).slideDown();
-    });
-    $('.top-menu li').mouseleave(function(){
-        $('.submenu', this).fadeOut();
-    });
-    $(function() {
+    console.log('Ваш результат:' + (result / $questionList.length * 100) + '% правильных ответов');
+ return result / $questionList.length * 100;
+  };
 
-      $('.js-checkboxes input, select').styler();
+  var $overlay, $modal, $closeButton;
 
-    });
+  function showModal() {
+    $overlay = $('<div class="overlay"></div>');
+    $modal = $('<div class="modal">Ваш результат: ' + checkResult() +'% ответов правильных </div>');
+    $closeButton = $('<button type="button" name="close">Close</button>');
+    $('body').append($overlay).append($modal).find($modal).hide().append($closeButton).fadeIn();
+    $closeButton.one('click', hideModal);
+
+  }
+  function hideModal() {
+    $modal.fadeOut();
+    $overlay.remove();
+    $modal.remove();
+  }
 });

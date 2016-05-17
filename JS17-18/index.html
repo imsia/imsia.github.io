@@ -1,123 +1,243 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>JavaScript Homework 9-10</title>
-        <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/jquery.formstyler.css">
-        <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-        <script src="js/jquery.formstyler.js"></script>
-        <script src="js/jquery.jcarousel.js"></script>
-    </head>
-    <body>
-        <div class="navbar">
-            <div class="container">
-            <div class="navigation-menu">
-                <ul class="nav">
-                    <li> <a href="#">Новости</a>
-                        <ul>
-                            <li><a href="#">Инфо 1</a></li>
-                            <li><a href="#">Инфо 2</a></li>
-                            <li><a href="#">Инфо 3</a></li>
-                            <li><a href="#">Инфо 4</a></li>
-                            <li><a href="#">Инфо 5</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">Лучшие фото</a>
-                        <ul>
-                            <li><a href="#">Фото дня</a></li>
-                            <li><a href="#">Фото недели</a></li>
-                            <li><a href="#">Фото месяца</a></li>
-                            <li><a href="#">Фото года</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">Блоги</a>
-                        <ul>
-                            <li><a href="#">Первый</a></li>
-                            <li><a href="#">Второй</a></li>
-                            <li><a href="#">Третий</a></li>                            
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">Путешествие</a>
-                        <ul>
-                            <li><a href="#">Для гурманов</a></li>
-                            <li><a href="#">Романтическое</a></li>
-                            <li><a href="#">С семьей</a></li>
-                            <li><a href="#">На машине</a></li>
-                            <li><a href="#">Активный отдых</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">Журналы</a>
-                        <ul>
-                            <li><a href="#">Новые номера</a></li>
-                            <li><a href="#">Выбор читателей</a></li>
-                            <li><a href="#">Архивы</a></li>
-                            <li><a href="#">Оформить подписку</a></li>
-                        </ul>
-                    </li>
-                </ul>
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js" charset="utf-8"></script>
+    <script src="https://cdn.jsdelivr.net/lodash/4.12.0/lodash.min.js"></script>
+    <script src="build/js/template.js"></script>
+    <script src="build/js/slick.js"></script>
+    <script src="src/js/news.js"></script>
+    <script src="build/js/script.js"></script>
+
+    <link rel="stylesheet" href="build/css/slick.css">
+    <link rel="stylesheet" href="build/css/slick-theme.css">
+    <link rel="stylesheet" href="build/css/style.css">
+  <title>SCSS, lodash</title>
+</head>
+<body>
+<div class="wrapper first">
+  <header>
+    <div class="sprite"></div>
+    <span class="firstLine">Build Home</span><br>
+    <span class="secondLine">Industrial Theme</span>
+    <ul class="contact">
+      <li class="contact__item"><a href="#">
+          <div class="contact__sprite1"></div>
+        </a></li>
+      <li class="contact__item"><a href="#">
+          <div class="contact__sprite2"></div>
+        </a></li>
+      <li class="contact__item"><a href="#">
+          <div class="contact__sprite3"></div>
+        </a></li>
+      <li class="contact__item"><a href="#">
+          <div class="contact__sprite4"></div>
+        </a></li>
+      <li class="contact__item"><a href="#">
+          <div class="contact__sprite5"></div>
+        </a></li>
+    </ul>
+  </header>
+  <menu class="clearfix">
+      <ul class="nav">
+        <li class="nav__item active"><a class= "nav__link" href="#">Home</a></li>
+        <li class="nav__item"><a class= "nav__link" href="#">Features</a></li>
+        <li class="nav__item"><a class= "nav__link" href="#">Services</a></li>
+        <li class="nav__item"><a class= "nav__link" href="#">News</a></li>
+        <li class="nav__item"><a class= "nav__link" href="#">Shop</a></li>
+      </ul>
+      <div class="search">
+        <form class="search__form" action="#">
+          <input class="search__text" type="text" name="name" value="" placeholder="Search...">
+          <input class="search__img" type="image" src="img/transparent.png">
+        </form>
+      </div>
+    </menu>
+  <section class="slider">
+    <div class="slider__list">
+      <div class="slider__item"><img src="img/logo1.jpg" alt=""></div>
+      <div class="slider__item"><img src="img/logo1.jpg" alt=""></div>
+      <div class="slider__item"><img src="img/logo1.jpg" alt=""></div>
+    </div>
+  </section>
+  <section class="advantages clearfix">
+    <div class="advantage1">
+      <span class="number">01</span>
+      <div class="advanage__content">
+        <div class="advanage__sprite1"></div>
+        <h2 class="advantage__head">Power Inside</h2>
+        <p class="advantage__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero vitae illo obcaecati quidem doloremque deserunt, reprehenderit at exercitationem debitis architecto repudiandae unde magni placeat atque temporibus, officia vero doloribus velit.</p>
+        <a href="" class="advantage__readmore">Read More</a>
+      </div>
+    </div>
+    <div class="advantage2">
+      <span class="number">02</span>
+      <div class="advanage__content">
+        <div class="advanage__sprite2"></div>
+        <h2 class="advantage__head">New Technologies</h2>
+        <p class="advantage__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus unde natus suscipit quos optio temporibus neque aperiam, accusamus culpa nihil eveniet, repellendus quis facere aliquid ipsa ad totam quas sequi.</p>
+        <a href="" class="advantage__readmore">Read More</a>
+      </div>
+    </div>
+    <div class="advantage3">
+      <span class="number">03</span>
+      <div class="advanage__content">
+        <div class="advanage__sprite3"></div>
+        <h2 class="advantage__head">Fast Support</h2>
+        <p class="advantage__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur harum, quasi, omnis dignissimos optio aut expedita ab totam adipisci natus molestias ad fuga minima inventore facere. Error, dicta velit deleniti.</p>
+        <a href="" class="advantage__readmore">Read More</a>
+      </div>
+    </div>
+  </section>
+</div>
+<section class="services clearfix">
+  <div class="wrapper">
+    <h1 class="services__head">Our Services</h1>
+    <ul class="sevices__list">
+      <li class="services__item"><a href="#" class="services__link"><div class="services__hoverLayout"></div><img src="img/services1.jpg" alt="" class="services__image"><span class="services__title">Schedule Services</span></a></li>
+      <li class="services__item"><a href="#" class="services__link"><div class="services__hoverLayout"></div><img src="img/services2.jpg" alt="" class="services__image"><span class="services__title">Preventive Maintance</span></a></li>
+      <li class="services__item"><a href="#" class="services__link"><div class="services__hoverLayout"></div><img src="img/services3.jpg" alt="" class="services__image"><span class="services__title">Tire &amp; Wheel Services</span></a></li>
+      <li class="services__item"><a href="#" class="services__link"><div class="services__hoverLayout"></div><img src="img/services4.jpg" alt="" class="services__image"><span class="services__title">Repair Services</span></a></li>
+    </ul>
+  </div>
+</section>
+<div class="wrapper first">
+  <section class="newsAndBanners clearfix">
+    <div class="news">
+      <h2 class="news__head">Latest News</h2>
+      <ul class="news__list">
+        <script type="text/template" id="news">
+          <% for (var i = 0; i < 2; i++) { %>
+          <li class="news__item">
+            <div class="news__imageBlock">
+              <div class="news__month"><%= data[i].month %></div>
+              <div class="news__date"><%= data[i].date %></div>
+              <img src=<%= data[i].imgSrc %> alt="" class="news__image">
             </div>
-        </div>
-        <div class="container">
-            <div id="carousel">
-            <figure id="spinner">
-                <img src="img/1.jpg" class="photo" alt="Журнал Traveler">
-                <img src="img/2.jpg" class="photo" alt="Журнал GEO">
-                <img src="img/3.jpg" class="photo" alt="Журнал ESCAPE">
-                <img src="img/4.png" class="photo" alt="Журнал ВОЯЖ">
-                <img src="img/4.jpg" class="photo" alt="Журнал Едем за границу">
-                <img src="img/5.jpg" class="photo" alt="Журнал Вокруг света">
-                <img src="img/6.jpg" class="photo" alt="Журнал Discovery">
-                <img src="img/7.jpg" class="photo" alt="Журнал Lonely planet">
-            </figure>
+            <div class="news__textBlock">
+              <h3 class="news__title"><a href="#" class="news__titleLink"><%= data[i].title %></a></h3>
+              <p class="news__secondLine">by <a href="#" class="news__author"><%= data[i].author %></a> Comments (<a href="#" class="news__comment"><%= data[i].comments %></a>)</p>
+              <p class="news__text"><%= data[i].text %></p>
             </div>
-<span style=float:left class=ss-icon onclick="galleryspin('-')">&lt;</span>
-<span style=float:right class=ss-icon onclick="galleryspin('')">&gt;</span>
-            <form action="">
-                <div>
-                    <fieldset class="js-dropdown">
-                        <legend>Выбрать журнал</legend>
-                        <select name="" id=""> 
-                            <option value="">Traveler</option>
-                            <option value="">GEO</option>
-                            <option value="">ESCAPE</option>
-                            <option value="">ВОЯЖ</option>
-                            <option value="">Едем за границу</option>
-                            <option value="">Вокруг света</option>
-                            <option value="">Discovery</option>
-                            <option value="">Lonely planet</option>                            
-                        </select>
-                    </fieldset>
-                </div>
-                <div>
-                    <fieldset class="js-checkboxes">
-                        <legend>Выбрать год выпуска</legend>
-                        <input type="checkbox" id="check1">
-                        <label for="check1">2016 год</label>
-                        <input type="checkbox" id="check2">
-                        <label for="check2">2015 год</label>
-                        <input type="checkbox" id="check3">
-                        <label for="check3">2014 год</label>
-                    </fieldset>
-                </div>
-                <div>
-                    <fieldset class="css-checkboxes">
-                        <legend>Выбрать месяц выпуска</legend>
-                        <input type="checkbox" id="test-check1">
-                        <label for="test-check1">Январь-Апрель</label>
-                        <input type="checkbox" id="test-check2">
-                        <label for="test-check2">Май-Август</label>
-                        <input type="checkbox" id="test-check3">
-                        <label for="test-check3">Сентябрь-Декабрь</label>
-                    </fieldset>
-                </div>
-            </form>
+          </li>
+          <% } %>
+        </script>
+      </ul>
+    </div>
+    <div class="banners">
+      <h2 class="banners__head">Banners place</h2>
+      <div class="banners__panel">
+        <div class="banners__panelWrapper clearfix">
+          <div class="banners__toggle">+</div>
+          <div class="banners__title">ACCORDION PANNEL 1</div>
         </div>
-        <script src="js/script.js"></script>
-    </body>
+        <div class="banners__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo dolor laudantium sapiente numquam tenetur rem doloribus, veniam nostrum necessitatibus voluptas rerum veritatis velit voluptatibus debitis mollitia totam. Necessitatibus, corporis non?</div>
+      </div>
+      <div class="banners__panel">
+        <div class="banners__panelWrapper clearfix">
+          <div class="banners__toggle">+</div>
+          <div class="banners__title">ACCORDION PANNEL 2</div>
+        </div>
+        <div class="banners__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo dolor laudantium sapiente numquam tenetur rem doloribus, veniam nostrum necessitatibus voluptas rerum veritatis velit voluptatibus debitis mollitia totam. Necessitatibus, corporis non?</div>
+      </div>
+      <div class="banners__panel">
+        <div class="banners__panelWrapper clearfix">
+          <div class="banners__toggle">+</div>
+          <div class="banners__title">ACCORDION PANNEL 3</div>
+        </div>
+        <div class="banners__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo dolor laudantium sapiente numquam tenetur rem doloribus, veniam nostrum necessitatibus voluptas rerum veritatis velit voluptatibus debitis mollitia totam. Necessitatibus, corporis non?</div>
+      </div>
+      <div class="banners__panel">
+        <div class="banners__panelWrapper clearfix">
+          <div class="banners__toggle">+</div>
+          <div class="banners__title">ACCORDION PANNEL 4</div>
+        </div>
+        <div class="banners__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo dolor laudantium sapiente numquam tenetur rem doloribus, veniam nostrum necessitatibus voluptas rerum veritatis velit voluptatibus debitis mollitia totam. Necessitatibus, corporis non?</div>
+      </div>
+    </div>
+  </section>
+  <section class="logotips clearfix">
+    <ul class="logotips__list">
+      <li class="logotips__item">
+        <div class="logotips__sprite1"></div>
+      </li>
+      <li class="logotips__item">
+        <div class="logotips__sprite2"></div>
+      </li>
+      <li class="logotips__item">
+        <div class="logotips__sprite3"></div>
+      </li>
+      <li class="logotips__item">
+        <div class="logotips__sprite4"></div>
+      </li>
+      <li class="logotips__item">
+        <div class="logotips__sprite5"></div>
+      </li>
+      <li class="logotips__item">
+        <div class="logotips__sprite6"></div>
+      </li>
+    </ul>
+  </section>
+</div>
+<footer>
+  <div class="wrapper">
+    <ul class="footer__nav clearfix">
+      <li class="footer__navItem">SOCIALS
+        <ul class="footer__list">
+          <li class="footer__item"><a href="#" class="footer__link">Facebook</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">Flickr</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">Twitter</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">Vimeo</a></li>
+        </ul>
+      </li>
+      <li class="footer__navItem">LINKS
+        <ul class="footer__list">
+          <li class="footer__item"><a href="#" class="footer__link">How to Write a Blog</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">Create a Blog in 4 Steps</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">15 Tips to Increase Traffic</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">20 Blog Post Ideas</a></li>
+        </ul>
+      </li>
+      <li class="footer__navItem">BLOGROLL
+        <ul class="footer__list">
+          <li class="footer__item"><a href="#" class="footer__link">Blogs Blog</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">Roll Up Roll Up</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">Blog Free</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">Wordpress Blog</a></li>
+        </ul>
+      </li>
+      <li class="footer__navItem">ABOUT US
+        <ul class="footer__list">
+          <li class="footer__item"><a href="#" class="footer__link">Agriculture</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">Harvest</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">Company news</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">Investor relations</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+    <section class="author">
+      <div class="wrapper">
+        <ul class="author__list">
+          <li class="author__adress">
+            <div class="author__sprite1"></div>
+            BuildHomeLtd. Street Name 123  23 45 Cityname
+          </li>
+          <li class="author__phone">
+            <div class="author__sprite2"></div>
+            + 123 900 123 456
+          </li>
+          <li class="author__email">
+            <div class="author__sprite3"></div>
+            info@buildhome.web
+          </li>
+          <li class="author__copy">
+            &copy; 2014 Build Home
+          </li>
+        </ul>
+      </div>
+    </section>
+</footer>
+
+</body>
 </html>

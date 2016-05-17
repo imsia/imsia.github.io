@@ -1,50 +1,23 @@
-﻿(function($) {
-    $(function() {
-        $('.jcarousel').jcarousel();
+$(function () {
+  $('.myCarousel').myCarousel({
+    description: true,
+    easing: 'easeOutCirc',
+  })
 
-        $('.jcarousel-control-prev')
-            .on('jcarouselcontrol:active', function() {
-                $(this).removeClass('inactive');
-            })
-            .on('jcarouselcontrol:inactive', function() {
-                $(this).addClass('inactive');
-            })
-            .jcarouselControl({
-                target: '-=1'
-            });
+  var data = {
+    name: "Склярова Ирина",
+    photoURL: "'https://github.com/imsia/imsia.github.io/JS11-12/img/photo.jpg'",
+    profession: "Студентка курса GoFrontend GoForIt Online",
+    reason1: "Хочу научиться новому и полезному",
+    reason2: "МХочу сменить профессию на более востребованную и прибыльную",
+    reason3: "Это реальная возможность изменить свою жизнь",
+    telephone: "+380502944442",
+    profileURL: "http://vk.com/id8833619"
+  }
 
-        $('.jcarousel-control-next')
-            .on('jcarouselcontrol:active', function() {
-                $(this).removeClass('inactive');
-            })
-            .on('jcarouselcontrol:inactive', function() {
-                $(this).addClass('inactive');
-            })
-            .jcarouselControl({
-                target: '+=1'
-            });
+  var $html = $('#test').html();
+  var content = tmpl($html, data);
 
-        $('.jcarousel-pagination')
-            .on('jcarouselpagination:active', 'a', function() {
-                $(this).addClass('active');
-            })
-            .on('jcarouselpagination:inactive', 'a', function() {
-                $(this).removeClass('active');
-            })
-            .jcarouselPagination();
-    });
-})(jQuery);
+  $('body').append(content);
 
-$(function(){
-    $('.top-menu li').mouseenter(function(){
-        $('.submenu', this).slideDown();
-    });
-    $('.top-menu li').mouseleave(function(){
-        $('.submenu', this).fadeOut();
-    });
-    $(function() {
-
-      $('.js-checkboxes input, select').styler();
-
-    });
-});
+})
