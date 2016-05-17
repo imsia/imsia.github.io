@@ -30,9 +30,9 @@ body {
 }
 .nav > li:hover {
     padding: 13px 29px;
-    background-image: -webkit-linear-gradient(bottom, #2e2e2e, #4a4a4a);
-    background-image: -o-linear-gradient(bottom, #2e2e2e, #4a4a4a);
-    background-image: linear-gradient(to top, #2e2e2e, #4a4a4a);
+    background: -webkit-linear-gradient(left, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
+    background: -o-linear-gradient(left, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
+    background: linear-gradient(to right, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
     border-left: 1px solid #838383;
     border-right: 1px solid #838383;
 }
@@ -71,7 +71,10 @@ body {
 }
 
 .nav li:hover a{ 
-  background:#303030;
+  background: -webkit-linear-gradient(left, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
+background: -o-linear-gradient(left, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
+
+background: linear-gradient(to right, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
   text-decoration:none;
 }
 .nav li:hover ul a{ 
@@ -81,7 +84,10 @@ body {
 }
 
 .nav li:hover ul li a:hover{ 
-  background:#303030;
+  background: -webkit-linear-gradient(left, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
+background: -o-linear-gradient(left, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
+
+background: linear-gradient(to right, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
   text-decoration:none;
   -moz-transform:scale(1.05);
   -webkit-transform:scale(1.05);
@@ -102,17 +108,13 @@ body {
 
 .submenu > li {
 
-    background: rgba(241,231,103,1);
-    background: -moz-linear-gradient(left, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
-    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(241,231,103,1)), color-stop(100%, rgba(254,182,69,1)));
     background: -webkit-linear-gradient(left, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
-    background: -o-linear-gradient(left, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
-    background: -ms-linear-gradient(left, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
-    background: linear-gradient(to right, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', endColorstr='#feb645', GradientType=1 );
+background: -o-linear-gradient(left, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
+
+background: linear-gradient(to right, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
 }
 .submenu > li > a {
-    color: black;
+    color: green;
     padding: 5px 30px;
     display: block;
     text-decoration: none;
