@@ -21,25 +21,22 @@ function pow(a, n) {
 
 //Поиск имени в массиве
 
-var arrayName = [];
-var n = 5;
-var flag = 0;
-for (var i = 0; i < n; i++) {
-  arrayName[i] = prompt ('Введите имя пользователя - ');
+var arrUsers = [];
+for ( var i = 0; i < 2; i++) {
+  arrUsers[i] = prompt('Введите ' + ( i + 1 ) + '-е имя пользователя', 'Константин');
 }
-// console.log ('array ',  arrayName);
-var userName = prompt ('Введите имя пользователя - ');
-// console.log ('userName ', userName);
-for (var i = 0; i < arrayName.length; i++) {
-  if (userName == arrayName[i]) {
-    flag++;
+var currentUser = prompt('Добро пожаловать! Введите имя пользователя', 'Светлана');
+var allowToLogin = false;
+for ( var i = 0; i <= arrUsers.length; i++) {
+  if ( currentUser === arrUsers[i] ) {
+    allowToLogin = true;
   }
 }
-// console.log ('array length ', arrayName.length, '\nflag ', flag);
-if (flag) {
-  alert (userName + ' Вы успешно вошли!');
-} else {
-    alert ('Ошибка');
-}
+
+if (allowToLogin) {
+    alert( currentUser + ', Вы успешно вошли!' );
+  } else {
+    alert( 'Ошибка! Пользователь не найден!' )
+  }
 
 
