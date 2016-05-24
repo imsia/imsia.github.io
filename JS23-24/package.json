@@ -1,13 +1,13 @@
 {
-  "name": "todolist",
+  "name": "My ToDo List",
   "version": "1.0.0",
-  "description": "javascript homework 11",
+  "description": "JS Homework 23-24",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Sergey Kulinich",
-  "license": "ISC",
+  "author": "Iryna Skliarova",
+  "license": "___",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-connect": "^4.0.0",
