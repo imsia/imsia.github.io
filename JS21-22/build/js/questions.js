@@ -2,106 +2,106 @@ use strict";
 $(function () {
 var questions = [ {
     questionID: 1,
-    text: "Сколько будет 2+2 ?",
+    text: "Назовите столицу страны Казахстан?",
     answers: [ {
-        text: "8",
+        text: "Алма-Ата",
         correct: false,
         value: 1
       }, {
-        text: "4",
+        text: "Астана",
         correct: true,
         value: 2
       }, {
-        text: "2",
+        text: "Караганда",
         correct: false,
         value: 3
       }, {
-        text: "24",
+        text: "Актау",
         correct: false,
         value: 4
       }
     ]
   }, {
     questionID: 2,
-    text: "Какие числа в сумме дают 10?",
+    text: "Назовите столицу страны Италия?",
     answers: [ {
-        text: "2 и 5",
+        text: "Неаполь",
         correct: false,
         value: 1
       }, {
-        text: "2 и 8",
+        text: "Рим",
         correct: true,
         value: 2
       }, {
-        text: "4 и 7",
+        text: "Помпеи",
         correct: false,
         value: 3
       }, {
-        text: "4 и 6",
-        correct: true,
+        text: "Милан",
+        correct: false,
         value: 4
       }
     ]
   }, {
     questionID: 3,
-    text: "2 + 2 / 2 = ?",
+    text: "Назовите страну, где столица Кито?",
     answers: [ {
-        text: "3",
+        text: "Эквадор",
         correct: true,
         value: 1
       }, {
-        text: "4",
+        text: "ЦАР",
         correct: false,
         value: 2
       }, {
-        text: "2",
+        text: "Палау",
         correct: false,
         value: 3
       }, {
-        text: "нет правильного ответа",
+        text: "Туркмения",
         correct: false,
         value: 4
       }
     ]
   }, {
     questionID: 4,
-    text: "Сколько нужно программистов, чтобы заменить лампочку?",
+    text: "Назовите страну, где столица Бриджтаун?",
     answers: [ {
-        text: "Ниодного, проблема не программная",
+        text: "Барбадос",
         correct: true,
         value: 1
       }, {
-        text: "1",
+        text: "Фиджи",
         correct: false,
         value: 2
       }, {
-        text: "2",
+        text: "Республика Корея",
         correct: false,
         value: 3
       }, {
-        text: "3",
+        text: "Македония",
         correct: false,
         value: 4
       }
     ]
   }, {
     questionID: 5,
-    text: "Какие числа в сумме дают 10?",
+    text: "В какой стране находится город Берген?",
     answers: [ {
-        text: "5 и 5",
+        text: "Норвегия",
         correct: true,
         value: 1
       }, {
-        text: "2 и 9",
+        text: "Франция",
         correct: false,
         value: 2
       }, {
-        text: "8 и 3",
+        text: "Швеция",
         correct: false,
         value: 3
       }, {
-        text: "7 и 3",
-        correct: true,
+        text: "Дания",
+        correct: false,
         value: 4
       }
     ]
