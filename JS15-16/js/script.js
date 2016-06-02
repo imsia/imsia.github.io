@@ -1,14 +1,6 @@
 "use strict"
-function GoogleCallback(data) {
-  console.log(arguments);
-  $('.wrapper ul').remove();
-  var ul = document.createElement("ul");
-    $.each(data.items, function(i, val){
-            var li = document.createElement("li");
-            li.innerHTML = '<a class="link" href="'+val.link+'" title="'+val.displayLink+'" target="_blank">'+val.htmlTitle+"</a><p class='url'>" + val.formattedUrl + "</p><p class='content'>" + val.htmlSnippet + "</p>";
-            ul.appendChild(li);
-    });
-    $('.wrapper').append(ul);
+function GoogleCallback (func, data) {
+    window[func](data);
 }
 $(function () {
 
@@ -24,11 +16,16 @@ $('.searchForm form').submit(function (e) {
   console.log(text);
   var cx = '004362905671051512275:elyp8llfgkg';
 
-  $.ajax({
-    url: 'https://www.googleapis.com/customsearch/v1?key=ABQIAAAACKQaiZJrS0bhr9YARgDqUxQBCBLUIYB7IF2WaNrkYqF0tBovNBQFDtM_KNtb3xQxWff2mI5hipc3lg='+ cx + '&q=' + text + '&callback=GoogleCallback',
-    dataType: 'jsonp',
-    method: 'GET'
-  })
+  $.getJSON("http://ajax.googleapis.com/ajax/services/search/web?v=1.0?key=ABQIAAAACKQaiZJrS0bhr9YARgDqUxQBCBLUIYB7IF2WaNrkYqF0tBovNBQFDtM_KNtb3xQxWff2mI5hipc3lg&q=PHP&callback=GoogleCallback&context=?",
+function(data){
+    var ul = document.createElement("ul");
+    $.each(data.results, function(i, val){
+            var li = document.createElement("li");
+            li.innerHTML = '<a href="'+val.url+'" title="'+val.url+'" target="_blank">'+val.title+"</a> - "+val.content;                            
+            ul.appendChild(li);
+    });
+    $('body').html(ul);
+});
 
 });
 });
