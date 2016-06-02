@@ -1,4 +1,4 @@
-﻿"use strict"
+"use strict"
 function GoogleCallback(data) {
   console.log(arguments);
   $('.wrapper ul').remove();
@@ -54,8 +54,8 @@ Worker.prototype.work = function () {
 
   function Student() {
     this.school = "Some University";
-    this.scholarship = 30;
-    this.favoriteSerial = 'Game of Thrones';
+    this.scholarship = 20;
+    this.favoriteSerial = 'Supernatural';
   }
   Student.prototype = new Human();
 
