@@ -25,7 +25,7 @@ $('.searchForm form').submit(function (e) {
   var cx = '004362905671051512275:elyp8llfgkg';
 
   $.ajax({
-    url: 'https://www.googleapis.com/customsearch/v1?key=AIzaSyCWYVWkxLfquDZaIX0qkwWN0U6x0og9Sgo&cx='+ cx + '&q=' + text + '&callback=GoogleCallback',
+    url: 'https://www.googleapis.com/customsearch/v1?key=ABQIAAAACKQaiZJrS0bhr9YARgDqUxQBCBLUIYB7IF2WaNrkYqF0tBovNBQFDtM_KNtb3xQxWff2mI5hipc3lg='+ cx + '&q=' + text + '&callback=GoogleCallback',
     dataType: 'jsonp',
     method: 'GET'
   })
@@ -54,8 +54,8 @@ Worker.prototype.work = function () {
 
   function Student() {
     this.school = "Some University";
-    this.scholarship = 20;
-    this.favoriteSerial = 'Supernatural';
+    this.scholarship = 30;
+    this.favoriteSerial = 'Game of Thrones';
   }
   Student.prototype = new Human();
 
