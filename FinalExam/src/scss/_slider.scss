@@ -1,0 +1,119 @@
+$sliderMaxWidth: 300px;
+$sliderHeight: 240px;
+$sliderTabDeskHeight: 400px;
+
+.margin-div {
+  @include respond-to(tab&desk) {
+    width: 2.75%;
+    float: left;
+    max-width: 20px;
+    height: 10px;
+   }
+  @include respond-to(desktop) {  width: 2%; }
+}
+.slider {
+  margin-top: 10px;
+  position: relative;
+  overflow: hidden;
+  max-width: $sliderMaxWidth;
+  height: $sliderHeight;
+  border-radius: 5px;
+  @include respond-to(tab&desk) {
+    width: 31.5%;
+    float: left;
+    height: $sliderTabDeskHeight;
+   }
+   @include respond-to(tablet) { max-width: 236px; }
+   @include respond-to(desktop) {  width: 32%; }
+  &:last-of-type{
+    margin-right: 0;
+  }
+  &__wrapper {
+    position: absolute;
+    left: 0;
+    transition: all 1s;
+  }
+  &__gradient {
+    position: relative;
+    z-index: 2;
+    height: inherit;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0));
+    border-radius: 5px
+  }
+  &__slide{
+    position: relative;
+    float: left;
+    max-width: $sliderMaxWidth;
+    height: $sliderHeight;
+    border-radius: 5px;
+    z-index: 1;
+    @include respond-to(tab&desk) { height: $sliderTabDeskHeight; }
+    @include respond-to(tablet) { max-width: 236px; }
+  }
+  &__prev {
+    display: none;
+    z-index: 3;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 0;
+    @include respond-to(tab&desk) { display: block; }
+  }
+  &__next {
+    display: none;
+    z-index: 3;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    @include respond-to(tab&desk) { display: block; }
+  }
+  &__number {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 300;
+    color: #fff;
+    background-color: $red;
+    border-radius: 25px;
+    padding: 3px 15px;
+    letter-spacing: 1.5px;
+    margin-top: 68px;
+    margin-left: 20px;
+  }
+  &__title {
+    margin-left: 20px;
+    margin-top: 15px;
+    color: #fff;
+    font-size: 24px;
+  }
+  &__text {
+    color: #ccc;
+    font-family: Roboto, sans-serif;
+    font-weight: 100;
+    font-size: 14px;
+    margin-left: 20px;
+    margin-top: 15px;
+    line-height: 1.2;
+  }
+}
+.slider1 .slider__slide {
+  background-image: url('../../img/step1.jpg');
+  background-repeat: no-repeat;
+  background-size: auto 120%;
+  background-position: -77px -30px;
+}
+.slider2 .slider__slide {
+  background-repeat: no-repeat;
+  background-size: auto 115%;
+  background-position: -34px -25px;
+  background-image: url('../../img/step2.jpg');
+  .slider__number {
+    margin-top: 98px;
+  }
+}
+.slider3 .slider__slide {
+  background-repeat: no-repeat;
+  background-size: auto 120%;
+  background-position: -66px -30px;
+  background-image: url('../../img/step3.jpg');
+}

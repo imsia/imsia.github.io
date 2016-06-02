@@ -1,0 +1,31 @@
+
+/* ---- grid ---- */
+
+.grid {
+  max-width: 1200px;
+}
+
+
+/* ---- grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+  width: 100%;
+}
+
+.grid-item {
+  height: 120px;
+  float: left;
+  background: #D26;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  &__text {
+    color: #fff;
+    font-size: 22px;
+    line-height: 120px;
+    text-align: center;
+    display: block;
+  }
+}
